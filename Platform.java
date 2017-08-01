@@ -49,5 +49,10 @@ public abstract class Platform
       // moves location to random (x, y) within the edges
       myX = (Math.random()* (rightEdge-myLength));
    }
-
+   public boolean overlap(Platform obj)
+	{
+		if(getX()+getLength() >= obj.getX()  &&  getX() <= obj.getX()+obj.getLength())
+		   return true;
+		return false;
+	}
 }
